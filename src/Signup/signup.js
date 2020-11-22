@@ -24,10 +24,10 @@ const [place, setPlace] = React.useState();
 
 const onSubmit = () => {
 
-    axios.post('http://23.239.24.16:5000/register_account', 
+    axios.post('https://23.239.24.16:5000/register_account', 
     { name: location?.state?.user['screen_name'], product: state, city: place})
-        .then(data => console.log(data))
-        .catch(err => console.log(err))
+        .then(data => console.info(data))
+        .catch(err => console.info(err))
 
         history.push({
             pathname: '/home',

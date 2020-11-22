@@ -11,7 +11,7 @@ export const Home = () => {
     const [state, setState] = React.useState();
 
     React.useEffect(() => {
-        axios.post('http://23.239.24.16:5000/get_requests', {product: location?.state?.product, city: location?.state?.location })
+        axios.post('https://23.239.24.16:5000/get_requests', {product: location?.state?.product, city: location?.state?.location })
         .then(data => {console.log(data)
         setState(data.data.reverse())        
         })
